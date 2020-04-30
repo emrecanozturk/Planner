@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanTableViewCell" rowHeight="63" id="KGk-i7-Jjw" customClass="PlanTableViewCell" customModule="Planner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMh-SJ-wWS">
+                        <rect key="frame" x="16" y="16" width="36" height="36"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="cxR-SC-9Lm"/>
+                            <constraint firstAttribute="width" constant="36" id="kVR-NH-frA"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal">
+                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="selectDone:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jDC-HB-yRT"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6m6-60-phK">
+                        <rect key="frame" x="68" y="16" width="236" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-f7-9vy">
+                        <rect key="frame" x="68" y="39.5" width="236" height="12.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QMh-SJ-wWS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="F9h-sR-CzJ"/>
+                    <constraint firstItem="6m6-60-phK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Ptd-d3-Aad"/>
+                    <constraint firstItem="YgK-f7-9vy" firstAttribute="leading" secondItem="6m6-60-phK" secondAttribute="leading" id="daf-Ho-PpI"/>
+                    <constraint firstItem="6m6-60-phK" firstAttribute="leading" secondItem="QMh-SJ-wWS" secondAttribute="trailing" constant="16" id="eCa-Lh-VjX"/>
+                    <constraint firstAttribute="trailing" secondItem="6m6-60-phK" secondAttribute="trailing" constant="16" id="gqI-d4-V8K"/>
+                    <constraint firstAttribute="trailing" secondItem="YgK-f7-9vy" secondAttribute="trailing" constant="16" id="iBi-Ny-Vou"/>
+                    <constraint firstAttribute="bottom" secondItem="YgK-f7-9vy" secondAttribute="bottom" constant="16" id="kLC-W3-wvY"/>
+                    <constraint firstItem="QMh-SJ-wWS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pNp-Ke-C5T"/>
+                    <constraint firstItem="YgK-f7-9vy" firstAttribute="top" secondItem="6m6-60-phK" secondAttribute="bottom" constant="4" id="sI5-PC-6qE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="doneButton" destination="QMh-SJ-wWS" id="5gG-G1-db2"/>
+                <outlet property="planDateLabel" destination="YgK-f7-9vy" id="e9e-8t-gYi"/>
+                <outlet property="planTitleLabel" destination="6m6-60-phK" id="pzv-hD-9xl"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="158.03571428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
